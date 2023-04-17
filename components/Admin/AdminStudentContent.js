@@ -6,43 +6,12 @@ import { FontsThin } from '../CommonStyles'
 import InfoContent from './ContentOfStudent/InfoContent'
 import HomeworksContent from './ContentOfStudent/HomeworksContent'
 import LessonChange from './ContentOfStudent/LessonChange'
-import WordListContent from './ContentOfStudent/WordListContent'
 import FileContent from './ContentOfStudent/FilesContent'
 import SummaryContent from './ContentOfStudent/SummaryContent'
-
+import WordListContent from './ContentOfStudent/WordlistContent'
 
 export default function AdminStudentContent({ data, student, setData, setNotification }) {
     const [state, setState] = React.useState(false);
-    // const styleAngleDown = { color: Colors.green, fontSize: "2.3em", transform: `rotate(${state ? 180 : 0}deg)` };
-    // const menuItems = React.useMemo(() =>
-    //   [
-    //     {
-    //       title: 'info/edit',
-    //       component: <InfoContent setData={setData} student={student} />
-    //     },
-    //     {
-    //       title: 'lessons change',
-    //       component: <LessonChange student={student} />
-    //     },
-    //     {
-    //       title: 'files',
-    //       component: <FileContent>files</FileContent>
-    //     },
-    //     {
-    //       title: 'homeworks',
-    //       component: <HomeworksContent student={student} setData={setData} />
-    //     },
-    //     {
-    //       title: 'lesson summary',
-    //       component: <>lesson summary</>
-    //     },
-    //     {
-    //       title: 'word list',
-    //       component: <WordListContent student={student} setData={setData}></WordListContent>
-    //     },
-    //   ]
-    // , [student])
-
     const [selectedMenu, setSelectedMenu] = React.useState('info/edit');
 
     return (
@@ -58,13 +27,6 @@ export default function AdminStudentContent({ data, student, setData, setNotific
                 &&
                 <DropDown>
                     <MenuItems>
-                        {/* {menuItems.map((menuItem, key) =>
-                          <MenuItem
-                            key={key}
-                            selected={menuItem.title === selectedMenu.title}
-                            onClick={() => setSelectedMenu(menuItem)}>{menuItem.title}
-                          </MenuItem>
-                      )} */}
                         <MenuItem selected={selectedMenu === 'info/edit'} onClick={() => setSelectedMenu('info/edit')}>info/edit</MenuItem>
                         <MenuItem selected={selectedMenu === 'lessons change'} onClick={() => setSelectedMenu('lessons change')}>lessons change</MenuItem>
                         <MenuItem selected={selectedMenu === 'files'} onClick={() => setSelectedMenu('files')}>files</MenuItem>

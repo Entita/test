@@ -224,17 +224,19 @@ const getAdmin = async (userDb) => {
   const filteredStudents = await Promise.all(studentsDb.map(async student => await getStudent(student, true)))
   const apologiesDb = await findAllFromMongo(Apology, { seen: false })
   const paymentRequestsDb = await getCollectionFromMongo(PaymentRequest)
-  const apologies = await Promise.all(
+  const apologies = []
+  await Promise.all(
     apologiesDb.map(async apologyDb => {
       const student = await filteredStudents.find(student => student.id == apologyDb.studentId)
 
-      return {
-        id: apologyDb._id,
-        studentFirstName: student.firstName,
-        studentLastName: student.lastName,
-        lessonFrom: apologyDb.from,
-        createdAt: apologyDb.createdAt,
-      }
+      if (student)
+        apologies.push({
+          id: apologyDb._id,
+          studentFirstName: student.firstName,
+          studentLastName: student.lastName,
+          lessonFrom: apologyDb.from,
+          createdAt: apologyDb.createdAt,
+        })
     })
   )
   const paymentRequests = await Promise.all(

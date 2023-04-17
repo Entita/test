@@ -6,12 +6,13 @@ import { Container } from '../components/CommonStyles'
 import LoginForm from '../components/Login/Login'
 import Footer from '../components/Footer'
 
-export { getServerSideProps } from '../components/getDataFromCookies'
+export { getServerSideProps } from '../components/GetDataFromCookies'
 
 export default function Home({ data, setData, userData, setNotification }) {
   React.useEffect(() => {
     if (userData) setData(userData)
     if (getCookie('userCookie')) Router.push('/dashboard')
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, userData])
 
   return (

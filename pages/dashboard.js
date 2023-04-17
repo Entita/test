@@ -4,7 +4,7 @@ import React from 'react';
 import Admin from '../components/Admin/Admin';
 import Student from '../components/Student/Student';
 
-export { getServerSideProps } from '../components/getDataFromCookies'
+export { getServerSideProps } from '../components/GetDataFromCookies'
 
 export default function Home({ data, setData, userData, setNotification }) {
   React.useEffect(() => {
@@ -13,6 +13,7 @@ export default function Home({ data, setData, userData, setNotification }) {
       else setData(userData)
     }
     if (!data) Router.push('/');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData, data])
 
   

@@ -24,6 +24,7 @@ export default function Notification({ notification, setNotification }) {
         }, 5000)
 
         return () => clearTimeout(timeout)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [notification, forceHide])
 
     return (

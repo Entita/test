@@ -8,7 +8,7 @@ import HomeworksContent from './ContentOfStudent/HomeworksContent'
 import LessonChange from './ContentOfStudent/LessonChange'
 import FileContent from './ContentOfStudent/FilesContent'
 import SummaryContent from './ContentOfStudent/SummaryContent'
-import WordListContent from './ContentOfStudent/WordlistContent'
+import WordListContent from './ContentOfStudent/WordListContent'
 
 export default function AdminStudentContent({ data, student, setData, setNotification }) {
     const [state, setState] = React.useState(false);

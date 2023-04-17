@@ -1,0 +1,16 @@
+Kopírovat CTRL+C
+Odstranit slovo CTRL+BACKSPACE
+Pøejít na zaèátek dokumentu CTRL+HOME
+Pøejít na konec dokumentu CTRL+END
+Vložit CTRL+V
+Uložit CTRL+S
+Vybrat vše CRTL+A
+
+
+Pracovní zaøazení?hod.?A?B?C?D?E?F
+Praktikanti?15??????210 000
+Øadový zamìstnanec?52?361 OOO?296 000?318 000?355 000?390 000?448 000
+Støední úroveò, mimo vedoucích?207?424 000?315 000?350 000?413 000?483 000?546 000
+Støední úroveò, vedoucí pozice?57?47 730?350 000?399 300?480 000?529 700?592 000
+Vyšší úroveò, mimo vedoucích?186?555 000?420 000?460 000?545 000?628 000?720 000
+Vyšší úroveò, vedoucí pozice?64?559 000?399 400?460 000?550 000?650 000?719 200

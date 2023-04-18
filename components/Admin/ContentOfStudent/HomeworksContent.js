@@ -14,7 +14,7 @@ export default function HomeworksContent({ student, setData, setNotification }) 
     async function removeItem(homeworkId) {
         console.log("Removing homework with this ID: ", id)
 
-        await axios('http://localhost:3000/api/user.change', {
+        await axios('user.change', {
             method: 'DELETE',
             data: {
                 adminId: id,

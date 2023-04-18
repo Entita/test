@@ -14,7 +14,7 @@ export default function LoginForm({ setData, setNotification }) {
 
 
     function sendData() {
-        axios('http://localhost:3000/api/user', {
+        axios('user', {
             method: 'PUT',
             data: {
                 userName,

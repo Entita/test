@@ -7,7 +7,7 @@ export async function getServerSideProps(context) {
   let user = null;
   if (userCookie) {
     // call get account with id
-    await axios.get(`http://localhost:3000/api/user?userCookie=${userCookie}`)
+    await axios.get(`user?userCookie=${userCookie}`)
       .then((data) => user = data.data)
   }
 

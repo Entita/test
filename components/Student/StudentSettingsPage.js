@@ -15,7 +15,7 @@ export default function SettingsPage({ data, setData, setSettingsPage, setNotifi
     const changePassword = async () => {
         // console.log(passwordRef.current.value)
         const changedPassword = passwordRef.current.value
-        await axios('http://localhost:3000/api/student.change', {
+        await axios('student.change', {
             method: 'PATCH',
             data: {
                 adminId: id,

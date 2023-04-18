@@ -73,7 +73,7 @@ export default function AddPage({ setAddPage, setNotification }) {
       lectures.push({ from: fromDate, to: toDate })
     }
 
-    axios('http://localhost:3000/api/user', {
+    axios('user', {
       method: 'POST',
       data: {
         role: 'student',

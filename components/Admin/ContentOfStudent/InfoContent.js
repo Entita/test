@@ -94,7 +94,7 @@ export default function InfoContent({ student, setData, setNotification }) {
     const removeStudent = async (studentId) => {
         const id = getCookie('userCookie')
         console.log(studentId)
-        await axios('http://localhost:3000/api/user.remove', {
+        await axios('user.remove', {
             method: 'DELETE',
             data: {
                 adminId: id,
@@ -115,7 +115,7 @@ export default function InfoContent({ student, setData, setNotification }) {
 
         if (changedName === student.firstName && changedSurname === student.lastName && arrayEquals(valuePlan, student.plan)) return
 
-        await axios('http://localhost:3000/api/user.change', {
+        await axios('user.change', {
             method: 'POST',
             data: {
                 adminId: id,

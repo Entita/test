@@ -272,7 +272,7 @@ export default async function handler(req, res) {
   const { method, body, query } = req;
 
   switch (method) {
-    // http://localhost:3000/api/user
+    // user
     case 'GET':
       const { userCookie } = query;
       

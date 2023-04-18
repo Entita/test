@@ -100,7 +100,7 @@ export default function MainContent({ data, setData, isRepresentative, setNotifi
   const day = nextLesson ? getDay(nextLesson.getDay()) : null
 
   const removeHomework = async (homeworkId) => {
-    await axios('http://localhost:3000/api/student.change', {
+    await axios('student.change', {
       method: 'DELETE',
       data: {
         adminId: id,

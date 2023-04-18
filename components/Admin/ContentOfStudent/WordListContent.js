@@ -12,7 +12,7 @@ export default function WordListContent({ student, setData, setNotification }) {
 
     const changeWordList = async () => {
         const changedWordList = wordListRef.current.value
-        await axios('http://localhost:3000/api/user.change', {
+        await axios('user.change', {
             method: 'PATCH',
             data: {
                 adminId: id,

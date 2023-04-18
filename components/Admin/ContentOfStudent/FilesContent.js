@@ -11,7 +11,7 @@ export default function FileContent({ data, setData, student, setNotification })
 
   const removeFile = async (file) => {
     const test = "a"
-    await axios('http://localhost:3000/api/user.change', {
+    await axios('user.change', {
       method: 'DELETE',
       data: {
         adminId: id,
@@ -36,7 +36,7 @@ export default function FileContent({ data, setData, student, setNotification })
     const formData = new FormData()
     formData.append('file', selectedFile)
 
-    await axios.post(`http://localhost:3000/api/upload.file?id=${student.id}&adminId=${data.id}`, formData, {
+    await axios.post(`upload.file?id=${student.id}&adminId=${data.id}`, formData, {
       headers: {
         "content-type": "multipart/form-data"
       },

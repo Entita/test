@@ -17,7 +17,7 @@ export default function PaymentPage({ data, setData, setPaymentPage, setNotifica
 
     const amount = hours * 250
 
-    await axios('http://localhost:3000/api/lesson.change', {
+    await axios('lesson.change', {
       method: 'PUT',
       data: {
         id: data.id,

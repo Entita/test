@@ -126,7 +126,7 @@ export default function LessonChange({ data, student, setData, setNotification }
         to: formattedDate.to,
         status: 'cancelled'
       }
-      await axios('http://localhost:3000/api/admin.lesson.change', {
+      await axios('admin.lesson.change', {
           method: 'POST',
           data: {
               adminId: id,
@@ -145,7 +145,7 @@ export default function LessonChange({ data, student, setData, setNotification }
     const saveTimeChange = async () => {
       const formattedLesson = formatDate()
 
-      await axios('http://localhost:3000/api/student.change', {
+      await axios('student.change', {
         method: 'POST',
         data: {
           adminId: id,

@@ -14,7 +14,7 @@ export default function SummaryContent({ setData, student, setNotification }) {
         const id = student.id
         const adminId = getCookie('userCookie')
         
-        await axios('http://localhost:3000/api/user.change', {
+        await axios('user.change', {
             method: 'DELETE',
             data: {
                 adminId,
@@ -38,7 +38,7 @@ export default function SummaryContent({ setData, student, setNotification }) {
             setNotification("You should fill all fields.")
         }
         else{
-            await axios('http://localhost:3000/api/student.change', {
+            await axios('student.change', {
                 method: 'PUT',
                 data: {
                     adminId,

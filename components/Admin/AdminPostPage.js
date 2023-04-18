@@ -17,7 +17,7 @@ export default function PostPage({ setPostPage, setData, data, setNotification }
   const id = getCookie('userCookie')
 
   const seenApology = async (apology) => {
-    await axios('http://localhost:3000/api/lesson.change', {
+    await axios('lesson.change', {
       method: 'PATCH',
       data: {
         adminId: id,
@@ -31,7 +31,7 @@ export default function PostPage({ setPostPage, setData, data, setNotification }
   }
 
   const createPayment = async (payment) => {
-    await axios('http://localhost:3000/api/payment.change', {
+    await axios('payment.change', {
         method: 'POST',
         data: {
             adminId: id,

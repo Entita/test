@@ -37,7 +37,7 @@ export default function ApologizePage({ data, setData, setApologizePage, setNoti
 
     console.log(dynamicDate, dateFormat)
 
-    await axios('http://localhost:3000/api/lesson.change', {
+    await axios('lesson.change', {
       method: 'POST',
       data: {
         studentId: data.id,

@@ -17,7 +17,7 @@ export default function HomeworksContentAdd({ student, setEdit, setData, setNoti
             setNotification("You should fill all fields.")
         }
         else {
-            await axios('http://localhost:3000/api/user.change', {
+            await axios('user.change', {
                 method: 'PUT',
                 data: {
                     adminId,
